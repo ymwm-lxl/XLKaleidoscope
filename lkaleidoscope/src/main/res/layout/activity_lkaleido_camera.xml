@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SurfaceView
+        android:id="@+id/camera_surfaceview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <!-- 顶部按钮 -->
+
+    <!-- 底部按钮 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/dp_32"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_16">
+
+        <ImageView
+            android:id="@+id/camera_img_back"
+            android:layout_width="@dimen/ic_small_32"
+            android:layout_height="@dimen/ic_small_32"
+            android:src="@drawable/ic_camera_back"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="0dp"/>
+
+        <ImageView
+            android:id="@+id/camera_img_takeCamera"
+            android:layout_width="@dimen/ic_big"
+            android:layout_height="@dimen/ic_big"
+            android:src="@drawable/ic_camera_take"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="0dp"/>
+
+        <ImageView
+            android:id="@+id/camera_img_switch"
+            android:layout_width="@dimen/ic_small_32"
+            android:layout_height="@dimen/ic_small_32"
+            android:src="@drawable/ic_camera_flip" />
+
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/camera_cv_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="?attr/Lkaleido_card_color"
+        app:cardElevation="@dimen/dp_2"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="@dimen/dp_6"
+        android:layout_margin="@dimen/dp_6"
+        android:visibility="gone"
+        app:contentPadding="@dimen/dp_12">
+
+        <FrameLayout
+            android:id="@+id/camera_fl_show"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/camera_img_show"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/dp_32"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_16">
+
+                <ImageView
+                    android:id="@+id/camera_img_closeShow"
+                    android:layout_width="@dimen/ic_big"
+                    android:layout_height="@dimen/ic_big"
+                    android:layout_marginRight="@dimen/dp_32"
+                    android:src="@drawable/ic_camera_disagree"/>
+
+                <ImageView
+                    android:id="@+id/camera_img_saveShow"
+                    android:layout_width="@dimen/ic_big"
+                    android:layout_height="@dimen/ic_big"
+                    android:layout_marginLeft="@dimen/dp_32"
+                    android:src="@drawable/ic_camera_agree"/>
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</FrameLayout>

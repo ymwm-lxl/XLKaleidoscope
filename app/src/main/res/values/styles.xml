@@ -1,0 +1,39 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+
+    <style name="mainTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- 页面主要背景色 （例如标题栏背景）-->
+        <item name="Lkaleido_main_color">#FC766A</item>
+        <!-- 页面主要背景色的透明色 -->
+        <item name="Lkaleido_main_color_transparent">#44FC766A</item>
+        <!-- 页面主要颜色 （选中等效果的颜色） -->
+        <item name="Lkaleido_two_color">#C5DE48</item>
+        <!-- 页面主要颜色背景色 -->
+        <item name="Lkaleido_two_color_transparent">#44C5DE48</item>
+
+        <!-- 卡片背景色 文件夹选择背景 -->
+        <item name="Lkaleido_card_color">#ffffff</item>
+        <!-- 图片展示页面图片背景色 -->
+        <item name="Lkaleido_grid_bg_color">#313031</item>
+
+        <!-- 文字主要颜色 -->
+        <item name="Lkaleido_font_main_color">#FFFFFF</item>
+        <!-- 文字-黑色 -->
+        <item name="Lkaleido_font_black_color">#393939</item>
+        <!-- 文字-浅灰 -->
+        <item name="Lkaleido_font_gray_color">#9A9A99</item>
+
+        <!-- 按钮点击时的背景色 -->
+        <item name="Lkaleido_sel_transparent">#33333333</item>
+    </style>
+
+</resources>

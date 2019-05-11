@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <CheckBox
+        android:id="@+id/item_imageFolder_rb_sel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:button="@null"
+        android:background="@drawable/sel_item"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_12"
+            android:background="@drawable/bg_image_folder">
+
+            <com.xuanluo.lkaleidoscope.view.LKaleidoImageView
+                android:id="@+id/item_imageFolder_img_preview"
+                android:layout_width="@dimen/ic_big"
+                android:layout_height="@dimen/ic_big"
+                android:src="@drawable/ic_default_image"
+                android:layout_marginRight="@dimen/dp_6"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:scaleType="centerCrop"/>
+
+        </FrameLayout>
+
+
+        <!-- 右边信息 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_imageFolder_tv_pathName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="所有图片"
+                android:textSize="@dimen/font_14sp"
+                android:textColor="?attr/Lkaleido_font_black_color"/>
+
+            <TextView
+                android:id="@+id/item_imageFolder_tv_pathSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="共 0 张"
+                android:textColor="?attr/Lkaleido_font_gray_color"
+                android:textSize="@dimen/font_12sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

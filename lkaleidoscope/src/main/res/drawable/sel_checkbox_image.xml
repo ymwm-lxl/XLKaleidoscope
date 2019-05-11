@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 选中背景 -->
+    <item android:state_checked="true" android:drawable="@drawable/ic_check_yes">
+        <shape android:shape="oval">
+            <!-- 色值 -->
+            <solid android:color="@color/two_color"/>
+            <stroke
+                android:width="@dimen/dp_2"
+                android:color="@color/two_color" />
+            <size android:width="@dimen/ic_small"
+                android:height="@dimen/ic_small"/>
+        </shape>
+    </item>
+    <!-- 默认背景 -->
+    <item android:state_checked="false" android:drawable="@drawable/ic_cleck_no">
+        <shape android:shape="oval" >
+            <solid android:color="@android:color/transparent"/>
+            <stroke
+                android:width="@dimen/dp_2"
+                android:color="@color/two_color" />
+            <size android:width="@dimen/ic_small"
+                android:height="@dimen/ic_small"/>
+
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/include_top_bar"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="?attr/Lkaleido_grid_bg_color">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/display_vp_show"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.viewpager.widget.ViewPager>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            android:layout_gravity="bottom"
+            android:background="?attr/Lkaleido_sel_transparent"
+            android:paddingTop="@dimen/dp_6"
+            android:paddingBottom="@dimen/dp_6">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/display_rv_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never">
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+
+
+    <!-- 底部 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="?attr/Lkaleido_main_color">
+
+
+        <TextView
+            android:id="@+id/display_tv_crop"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/sel_transparent"
+            android:gravity="center"
+            android:text="@string/make"
+            android:textColor="?attr/Lkaleido_font_main_color"
+            android:textSize="@dimen/font_16sp"
+            android:paddingLeft="@dimen/dp_14"
+            android:paddingRight="@dimen/dp_14"/>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="0dp"/>
+
+
+        <TextView
+            android:id="@+id/display_tv_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/sel_transparent"
+            android:gravity="center"
+            android:text="@string/ok"
+            android:textColor="?attr/Lkaleido_font_main_color"
+            android:textSize="@dimen/font_16sp"
+            android:paddingLeft="@dimen/dp_14"
+            android:paddingRight="@dimen/dp_14"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

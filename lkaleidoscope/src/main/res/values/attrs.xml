@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="Lkaleido_main_color" format="color"/>
+    <attr name="Lkaleido_main_color_transparent" format="color"/>
+    <attr name="Lkaleido_two_color" format="color"/>
+    <attr name="Lkaleido_two_color_transparent" format="color"/>
+
+    <attr name="Lkaleido_card_color" format="color"/>
+    <attr name="Lkaleido_grid_bg_color" format="color"/>
+
+    <attr name="Lkaleido_font_main_color" format="color"/>
+    <attr name="Lkaleido_font_black_color" format="color"/>
+    <attr name="Lkaleido_font_gray_color" format="color"/>
+    <attr name="Lkaleido_sel_transparent" format="color"/>
+
+
+    <!-- 自定义图片控件 -->
+    <declare-styleable name="LKaleidoImageView">
+        <!-- 指定高度；宽/高 -->
+        <attr name="height_ratio_iv" format="float"/>
+        <!-- 指定宽度：高/宽 -->
+        <attr name="weight_ratio_iv" format="float"/>
+    </declare-styleable>
+
+    <!-- 选择的图片的选择按钮的属性 -->
+    <declare-styleable name="LKaleidoImageSelCheckBox">
+        <attr name="lk_rope_Id" format="reference"/>
+    </declare-styleable>
+
+
+</resources>

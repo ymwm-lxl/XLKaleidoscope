@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/sel_transparent"
+    android:id="@+id/item_gridCamera_fmAll">
+
+    <com.xuanluo.lkaleidoscope.view.LKaleidoImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:height_ratio_iv="1"
+        android:background="@color/card_color"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:drawableTop="@drawable/ic_add_a_photo"
+        android:drawablePadding="@dimen/dp_6"
+        android:text="拍摄照片"
+        android:textSize="@dimen/font_14sp"
+        android:textColor="?attr/Lkaleido_two_color" />
+
+</FrameLayout>

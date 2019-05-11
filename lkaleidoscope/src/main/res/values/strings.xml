@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LKaleidoscope</string>
+    <string name="all_image">所有图片</string>
+    <string name="over">完成</string>
+    <string name="over_show_size">完成（ %s ）</string>
+    <string name="ok">确定</string>
+    <string name="make">裁剪</string>
+</resources>

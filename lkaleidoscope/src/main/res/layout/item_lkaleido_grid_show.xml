@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/ic_default_image">
+
+
+    <com.xuanluo.lkaleidoscope.view.LKaleidoImageView
+        android:id="@+id/item_gridShow_iv_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:height_ratio_iv="1"
+        android:src="@mipmap/test"/>
+
+    <View
+        android:id="@+id/item_gridShow_view_imageSelBorder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sel_image"
+        android:button="@null"/>
+
+
+    <com.xuanluo.lkaleidoscope.view.LKaleidoImageSelCheckBox
+        android:id="@+id/item_gridShow_cb_imageSel"
+        android:layout_width="@dimen/ic_small"
+        android:layout_height="@dimen/ic_small"
+        android:layout_gravity="right|top"
+        android:gravity="center"
+        android:background="@drawable/sel_checkbox_image"
+        android:button="@null"
+        android:layout_marginRight="@dimen/dp_6"
+        android:layout_marginTop="@dimen/dp_6"
+        app:lk_rope_Id ="@id/item_gridShow_view_imageSelBorder"/>
+
+
+
+</FrameLayout>

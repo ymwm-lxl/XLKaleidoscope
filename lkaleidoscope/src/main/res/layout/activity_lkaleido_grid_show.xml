@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/gridShow_topBar"
+        layout="@layout/include_top_bar"/>
+
+
+
+    <!-- 图片展示部分 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/gridShow_rv_images"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/Lkaleido_grid_bg_color">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </FrameLayout>
+
+    <!-- 底部 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="?attr/Lkaleido_main_color">
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="0dp"/>
+
+        <TextView
+            android:id="@+id/gridShow_tv_over"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/sel_transparent"
+            android:gravity="center"
+            android:text="@string/over"
+            android:textColor="?attr/Lkaleido_font_main_color"
+            android:textSize="@dimen/font_16sp"
+            android:paddingLeft="@dimen/dp_14"
+            android:paddingRight="@dimen/dp_14"/>
+
+    </LinearLayout>
+
+</LinearLayout>
