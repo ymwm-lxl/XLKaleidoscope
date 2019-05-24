@@ -31,6 +31,7 @@ import java.util.List;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SimpleItemAnimator;
 import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat;
 
 /**
@@ -198,6 +199,7 @@ public class LKaleidoGridShowActivity extends LKaleidoBaseActivity
         mShowAdapter.setOnItemClicklistener(this);
         rvImage.setLayoutManager(new GridLayoutManager(this, mLKaleidoscope.getSpanCountLimit()));
         rvImage.addItemDecoration(new GridSpacingItemDecoration(mLKaleidoscope.getSpanCountLimit(), LKaleidoUtils.dp2px(this, 2), false));
+        ((SimpleItemAnimator)rvImage.getItemAnimator()).setSupportsChangeAnimations(false);
         rvImage.setAdapter(mShowAdapter);
         /***************** 图片展示 *********************/
 
@@ -280,7 +282,7 @@ public class LKaleidoGridShowActivity extends LKaleidoBaseActivity
             }
         }else {
             //多选
-            mShowAdapter.setSelImages(lKaleidoImageBean);
+            mShowAdapter.setSelImages(lKaleidoImageBean,position);
         }
 
     }

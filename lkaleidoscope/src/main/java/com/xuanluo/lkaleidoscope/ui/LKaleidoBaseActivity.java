@@ -142,16 +142,18 @@ public class LKaleidoBaseActivity extends AppCompatActivity {
         checknoDrawableCompat.setTint(two_color);
 
         //图片选择边框
-        VectorDrawableCompat checkBorderDrawableCompat = VectorDrawableCompat.create(getResources(),R.drawable.bg_image_sel_border,getTheme());
-        checkBorderDrawableCompat.setTint(two_color);
+//        VectorDrawableCompat checkBorderDrawableCompat = VectorDrawableCompat.create(getResources(),R.drawable.bg_image_sel_border,getTheme());
+//        checkBorderDrawableCompat.setTint(two_color);
 
         //文件夹选择背景
-        VectorDrawableCompat folderBGDrawableCompat = VectorDrawableCompat.create(getResources(),R.drawable.bg_folder_sel_color,getTheme());
-        folderBGDrawableCompat.setTint(two_color_transparent);
+//        VectorDrawableCompat folderBGDrawableCompat = VectorDrawableCompat.create(getResources(),R.drawable.bg_folder_sel_color,getTheme());
+//        folderBGDrawableCompat.setTint(two_color_transparent);
+
+        // TODO: 2019/5/24
 
         //点击背景
-        VectorDrawableCompat clickBGDrawableCompat = VectorDrawableCompat.create(getResources(),R.drawable.bg_item_click_bg,getTheme());
-        clickBGDrawableCompat.setTint(sel_transparent);
+//        VectorDrawableCompat clickBGDrawableCompat = VectorDrawableCompat.create(getResources(),R.drawable.bg_item_click_bg,getTheme());
+//        clickBGDrawableCompat.setTint(sel_transparent);
 
         //相机图标
         VectorDrawableCompat cameraBackDrawableCompat = VectorDrawableCompat.create(getResources(),R.drawable.ic_camera_back,getTheme());

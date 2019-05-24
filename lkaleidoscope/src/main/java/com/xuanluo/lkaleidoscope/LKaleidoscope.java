@@ -19,7 +19,6 @@ import androidx.annotation.StyleRes;
  * Author：暄落丶
  * Date：2019/4/27
  */
-// TODO: 2019/4/27 改为链式调用
 public class LKaleidoscope {
     public static final String TAG = LKaleidoscope.class.getSimpleName();
 
@@ -294,6 +293,7 @@ public class LKaleidoscope {
     }
 
     public LKaleidoToastShow getToastShow() {
+        // TODO: 2019/5/24 设置默认的toast 
         return mToastShow;
     }
 

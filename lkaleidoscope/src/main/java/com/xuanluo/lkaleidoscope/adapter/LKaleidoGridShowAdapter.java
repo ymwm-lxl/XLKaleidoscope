@@ -211,7 +211,7 @@ public class LKaleidoGridShowAdapter extends RecyclerView.Adapter<RecyclerView.V
     }
 
     //选择了图片
-    public void setSelImages(LKaleidoImageBean lKaleidoImageBean){
+    public void setSelImages(LKaleidoImageBean lKaleidoImageBean,int position){
         if (mSelImageList.contains(lKaleidoImageBean)){
             mSelImageList.remove(lKaleidoImageBean);
         }else {
@@ -224,13 +224,16 @@ public class LKaleidoGridShowAdapter extends RecyclerView.Adapter<RecyclerView.V
         if (onItemClicklistener!= null){
             onItemClicklistener.OnItemSelSize(mSelImageList.size());
         }
-        notifyDataSetChanged();
+//        notifyDataSetChanged();
+        notifyItemChanged(position);
+//        notifyItemRangeChanged(position,1);
     }
 
     //获取选择的图片
     public ArrayList<LKaleidoImageBean> getSelImages(){
         return mSelImageList;
     }
+
 
 
 

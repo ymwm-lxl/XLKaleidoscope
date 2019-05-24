@@ -2,8 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/ic_default_image">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <com.xuanluo.lkaleidoscope.view.LKaleidoImageView
