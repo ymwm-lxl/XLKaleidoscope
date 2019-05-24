@@ -52,9 +52,9 @@ public class LKaleidoBaseActivity extends AppCompatActivity {
         mBaseLKaleidoscope = LKaleidoscope.getInstance();
         setTheme(mBaseLKaleidoscope.getThemeStyle());
         initAttr();
-
         initDrawable();
-
+        //沉浸式
+        setTranslucentStatus();
     }
 
 
@@ -70,7 +70,7 @@ public class LKaleidoBaseActivity extends AppCompatActivity {
                     | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
             decorView.setSystemUiVisibility(option);
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(Color.TRANSPARENT);
+            window.setStatusBarColor(main_color);
             //导航栏颜色也可以正常设置
 //            window.setNavigationBarColor(Color.TRANSPARENT);
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {

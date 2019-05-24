@@ -128,7 +128,6 @@ public class LkaleidoDisplayActivity extends LKaleidoBaseActivity implements Lka
 
     private void initView(){
         //沉浸式
-        setTranslucentStatus();
 
         mIvBack = findViewById(R.id.topBar_iv_back);
         mVpShow = findViewById(R.id.display_vp_show);
@@ -255,6 +254,7 @@ public class LkaleidoDisplayActivity extends LKaleidoBaseActivity implements Lka
             options.setShowCropFrame(true); //设置是否显示裁剪边框(true为方形边框)
             options.setShowCropGrid(true); ////设置是否显示裁剪网格
             options.setCircleDimmedLayer(false);////设置是否为圆形裁剪框
+            options.setStatusBarColor(main_color);
         }
 
         UCrop.of(suri, euri)

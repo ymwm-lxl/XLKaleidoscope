@@ -78,16 +78,18 @@ public class LKaleidoscope {
         return SDPhth;
     }
 
-    public void setSDPhth(String SDPhth) {
+    public LKaleidoscope setSDPhth(String SDPhth) {
         this.SDPhth = SDPhth;
+        return this;
     }
 
     public int getThemeStyle() {
         return themeStyle;
     }
 
-    public void setThemeStyle(@StyleRes int themeStyle) {
+    public LKaleidoscope setThemeStyle(@StyleRes int themeStyle) {
         this.themeStyle = themeStyle;
+        return this;
     }
 
     public boolean isRadioMode() {
@@ -100,57 +102,64 @@ public class LKaleidoscope {
         return radioMode;
     }
 
-//    public void setRadioMode(boolean radioMode) {
-//        this.radioMode = radioMode;
-//    }
+    public LKaleidoscope setRadioMode(boolean radioMode) {
+        this.radioMode = radioMode;
+        return this;
+    }
 
 
     public boolean isGifShow() {
         return gifShow;
     }
 
-    public void setGifShow(boolean gifShow) {
+    public LKaleidoscope setGifShow(boolean gifShow) {
         this.gifShow = gifShow;
+        return this;
     }
 
     public int getSelectLimit() {
         return selectLimit;
     }
 
-    public void setSelectLimit(int selectLimit) {
+    public LKaleidoscope setSelectLimit(int selectLimit) {
         this.selectLimit = selectLimit;
+        return this;
     }
 
     public int getSelectMinLimit() {
         return selectMinLimit;
     }
 
-    public void setSelectMinLimit(int selectMinLimit) {
+    public LKaleidoscope setSelectMinLimit(int selectMinLimit) {
         this.selectMinLimit = selectMinLimit;
+        return this;
     }
 
     public boolean getCrop() {
         return crop;
     }
 
-    public void setCrop(boolean crop) {
+    public LKaleidoscope setCrop(boolean crop) {
         this.crop = crop;
+        return this;
     }
 
     public boolean isDisplay() {
         return display;
     }
 
-    public void setDisplay(boolean display) {
+    public LKaleidoscope setDisplay(boolean display) {
         this.display = display;
+        return this;
     }
 
     public int getSpanCountLimit() {
         return spanCountLimit;
     }
 
-    public void setSpanCountLimit(int spanCountLimit) {
+    public LKaleidoscope setSpanCountLimit(int spanCountLimit) {
         this.spanCountLimit = spanCountLimit;
+        return this;
     }
 
     public boolean isShowCamera() {
@@ -158,32 +167,36 @@ public class LKaleidoscope {
         return showCamera;
     }
 
-    public void setShowCamera(boolean showCamera) {
+    public LKaleidoscope setShowCamera(boolean showCamera) {
         this.showCamera = showCamera;
+        return this;
     }
 
     public float getOutPutX() {
         return outPutX;
     }
 
-    public void setOutPutX(float outPutX) {
+    public LKaleidoscope setOutPutX(float outPutX) {
         this.outPutX = outPutX;
+        return this;
     }
 
     public float getOutPutY() {
         return outPutY;
     }
 
-    public void setOutPutY(float outPutY) {
+    public LKaleidoscope setOutPutY(float outPutY) {
         this.outPutY = outPutY;
+        return this;
     }
 
     public boolean isFreeStyleCrop() {
         return freeStyleCrop;
     }
 
-    public void setFreeStyleCrop(boolean freeStyleCrop) {
+    public LKaleidoscope setFreeStyleCrop(boolean freeStyleCrop) {
         this.freeStyleCrop = freeStyleCrop;
+        return this;
     }
 
     public int getCompressionQuality() {
@@ -196,7 +209,7 @@ public class LKaleidoscope {
         }
     }
 
-    public void setCompressionQuality(int compressionQuality) {
+    public LKaleidoscope setCompressionQuality(int compressionQuality) {
         //范围只能是0~100
         if (compressionQuality <= 100 &&compressionQuality >= 0){
 
@@ -204,86 +217,98 @@ public class LKaleidoscope {
         }else {
             CompressionQuality = 100;
         }
+
+        return this;
     }
 
     public boolean isCircleDimmed() {
         return circleDimmed;
     }
 
-    public void setCircleDimmed(boolean circleDimmed) {
+    public LKaleidoscope setCircleDimmed(boolean circleDimmed) {
         this.circleDimmed = circleDimmed;
+        return this;
     }
 
     public boolean isRotate() {
         return rotate;
     }
 
-    public void setRotate(boolean rotate) {
+    public LKaleidoscope setRotate(boolean rotate) {
         this.rotate = rotate;
+        return this;
     }
 
     public int getIcCameraBack() {
         return icCameraBack;
     }
 
-    public void setIcCameraBack(int icCameraBack) {
+    public LKaleidoscope setIcCameraBack(int icCameraBack) {
         this.icCameraBack = icCameraBack;
+        return this;
     }
 
     public int getIcCameraTake() {
         return icCameraTake;
     }
 
-    public void setIcCameraTake(int icCameraTake) {
+    public LKaleidoscope setIcCameraTake(int icCameraTake) {
         this.icCameraTake = icCameraTake;
+        return this;
     }
 
     public int getIcCameraFlip() {
         return icCameraFlip;
     }
 
-    public void setIcCameraFlip(int icCameraFlip) {
+    public LKaleidoscope setIcCameraFlip(int icCameraFlip) {
         this.icCameraFlip = icCameraFlip;
+        return this;
     }
 
     public int getIcCameraDisagree() {
         return icCameraDisagree;
     }
 
-    public void setIcCameraDisagree(int icCameraDisagree) {
+    public LKaleidoscope setIcCameraDisagree(int icCameraDisagree) {
         this.icCameraDisagree = icCameraDisagree;
+        return this;
     }
 
     public int getIcCameraAgree() {
         return icCameraAgree;
     }
 
-    public void setIcCameraAgree(int icCameraAgree) {
+    public LKaleidoscope setIcCameraAgree(int icCameraAgree) {
         this.icCameraAgree = icCameraAgree;
+        return this;
     }
 
     public LKaleidoImageLoader getImageLoader() {
         return imageLoader;
     }
 
-    public void setImageLoader(LKaleidoImageLoader imageLoader) {
+    public LKaleidoscope setImageLoader(LKaleidoImageLoader imageLoader) {
         this.imageLoader = imageLoader;
+        return this;
     }
 
     public LKaleidoToastShow getToastShow() {
         return mToastShow;
     }
 
-    public void setToastShow(LKaleidoToastShow toastShow) {
+    public LKaleidoscope setToastShow(LKaleidoToastShow toastShow) {
         mToastShow = toastShow;
+        return this;
     }
 
     public List<LKaleidoImageFolder> getImageFolders() {
         return mImageFolders;
     }
 
-    public void setImageFolders(List<LKaleidoImageFolder> imageFolders) {
+    public LKaleidoscope setImageFolders(List<LKaleidoImageFolder> imageFolders) {
         mImageFolders = imageFolders;
+        return this;
     }
 
 }

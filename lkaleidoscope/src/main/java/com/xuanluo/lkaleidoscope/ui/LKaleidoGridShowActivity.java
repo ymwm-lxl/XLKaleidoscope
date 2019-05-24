@@ -75,7 +75,6 @@ public class LKaleidoGridShowActivity extends LKaleidoBaseActivity
         initClick();
     }
 
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -127,20 +126,8 @@ public class LKaleidoGridShowActivity extends LKaleidoBaseActivity
         }
     }
 
-    public int getStatusBarHeight(Context context) {
-        int result = 0;
-        int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen",
-                "android");
-        if (resourceId > 0) {
-            result = context.getResources().getDimensionPixelSize(resourceId);
-        }
-        return result;
-    }
-
     private void initView() {
         //沉浸式
-//        setTranslucentStatus();
-
 
         mIvBack = findViewById(R.id.topBar_iv_back);
         tvSelFolder = findViewById(R.id.topBar_tv_folderSel);
@@ -150,11 +137,6 @@ public class LKaleidoGridShowActivity extends LKaleidoBaseActivity
         tvSelFolder.setVisibility(View.VISIBLE);
 
         llTopBar = findViewById(R.id.gridShow_topBar);
-
-
-        int statusBarHeight = getStatusBarHeight(this.getBaseContext());
-        llTopBar.setPadding(0, statusBarHeight, 0, 0);
-
 
     }
 
@@ -193,13 +175,11 @@ public class LKaleidoGridShowActivity extends LKaleidoBaseActivity
     }
 
     private void initData() {
-
         //获取传递过来的数据
         if (getIntent() != null && getIntent().getExtras() != null){
             Bundle getBundle = getIntent().getExtras();
             isCamera = getBundle.getBoolean(LKALEIDO_DATA_IS_CAMERA,false);
         }
-
 
         //判断是不是只拍照
         if (isCamera){
@@ -209,8 +189,6 @@ public class LKaleidoGridShowActivity extends LKaleidoBaseActivity
             //不是只需要拍照功能
             lKaleidoImageDataSource = new LKaleidoImageDataSource(this, null, this);
         }
-
-
     }
 
     private void initAdapter() {

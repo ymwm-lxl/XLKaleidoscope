@@ -93,24 +93,45 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initLKaleidoscope(){
-        LKaleidoscope lKaleidoscope = LKaleidoscope.getInstance();
+        LKaleidoscope lKaleidoscope = LKaleidoscope.getInstance()
+                .setImageLoader(new GlideImageLoader())//设置图片加载器
+                .setThemeStyle(R.style.mainTheme)//设置样式
+                .setToastShow(new ToastShow())//toast 显示仪
+                .setSelectLimit(3)//图片最多数量//如果設置為1 則為單選
+                .setGifShow(true)//是否显示gif 默认显示
+                .setSelectMinLimit(1)//最小选择图片数量 //如果显示相机，则无法控制
+                .setSpanCountLimit(3)//設置圖片列數
+                .setShowCamera(true)//是否显示相机
+                .setCrop(true)//是否裁剪
+                .setDisplay(true)//是否预览
+                .setOutPutX(1)//宽高比
+                .setOutPutY(1)//宽高比
+                .setFreeStyleCrop(false)//是否能够拖动裁剪框（比例自定）
+                .setCompressionQuality(100)//设置裁剪的图片质量，取值0-100
+                .setCircleDimmed(false)//是否要圆形
+                .setRotate(false);//是否支持旋转
+//                .setIcCameraBack(R.mipmap.ic_launcher)//相机页面-退出拍照页面按钮
+//                .setIcCameraTake(R.mipmap.ic_launcher)//相机页面-拍照按钮
+//                .setIcCameraFlip(R.mipmap.ic_launcher)//相机页面-切换前后摄像头按钮
+//                .setIcCameraDisagree(R.mipmap.ic_launcher)//相机页面-预览页面-重新拍摄按钮
+//                .setIcCameraAgree(R.mipmap.ic_launcher);//相机页面-预览页面-保存按钮
 
-        lKaleidoscope.setImageLoader(new GlideImageLoader());//设置图片加载器
-//        lKaleidoscope.setThemeStyle(R.style.mainTheme);//设置样式
-        lKaleidoscope.setToastShow(new ToastShow());//toast 显示仪
-        lKaleidoscope.setSelectLimit(3);//图片最多数量//如果設置為1 則為單選
-        lKaleidoscope.setGifShow(true); //是否显示gif 默认显示
-        lKaleidoscope.setSelectMinLimit(1); //最小选择图片数量 //如果显示相机，则无法控制
-        lKaleidoscope.setSpanCountLimit(3);//設置圖片列數
-        lKaleidoscope.setShowCamera(true);//是否显示相机
-        lKaleidoscope.setCrop(true);//是否裁剪
-        lKaleidoscope.setDisplay(true); //是否预览
-        lKaleidoscope.setOutPutX(1);//宽高比
-        lKaleidoscope.setOutPutY(1);//宽高比
-        lKaleidoscope.setFreeStyleCrop(false);//是否能够拖动裁剪框（比例自定）
-        lKaleidoscope.setCompressionQuality(100); //设置裁剪的图片质量，取值0-100
-        lKaleidoscope.setCircleDimmed(false);//是否要圆形
-        lKaleidoscope.setRotate(false);//是否支持旋转
+//        lKaleidoscope.setImageLoader(new GlideImageLoader());//设置图片加载器
+////        lKaleidoscope.setThemeStyle(R.style.mainTheme);//设置样式
+//        lKaleidoscope.setToastShow(new ToastShow());//toast 显示仪
+//        lKaleidoscope.setSelectLimit(3);//图片最多数量//如果設置為1 則為單選
+//        lKaleidoscope.setGifShow(true); //是否显示gif 默认显示
+//        lKaleidoscope.setSelectMinLimit(1); //最小选择图片数量 //如果显示相机，则无法控制
+//        lKaleidoscope.setSpanCountLimit(3);//設置圖片列數
+//        lKaleidoscope.setShowCamera(true);//是否显示相机
+//        lKaleidoscope.setCrop(true);//是否裁剪
+//        lKaleidoscope.setDisplay(true); //是否预览
+//        lKaleidoscope.setOutPutX(1);//宽高比
+//        lKaleidoscope.setOutPutY(1);//宽高比
+//        lKaleidoscope.setFreeStyleCrop(false);//是否能够拖动裁剪框（比例自定）
+//        lKaleidoscope.setCompressionQuality(100); //设置裁剪的图片质量，取值0-100
+//        lKaleidoscope.setCircleDimmed(false);//是否要圆形
+//        lKaleidoscope.setRotate(false);//是否支持旋转
 
 //        lKaleidoscope.setIcCameraBack(R.mipmap.ic_launcher);//相机页面-退出拍照页面按钮
 //        lKaleidoscope.setIcCameraTake(R.mipmap.ic_launcher);//相机页面-拍照按钮
