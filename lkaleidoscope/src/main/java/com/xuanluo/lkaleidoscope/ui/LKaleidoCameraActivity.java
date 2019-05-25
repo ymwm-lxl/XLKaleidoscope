@@ -31,6 +31,7 @@ import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.xuanluo.lkaleidoscope.LKaleidoscope;
 import com.xuanluo.lkaleidoscope.R;
@@ -127,6 +128,7 @@ public class LKaleidoCameraActivity extends LKaleidoBaseActivity implements Surf
         imgSwitch.setImageResource(mLKaleidoscope.getIcCameraFlip());
         mImgShowClose.setImageResource(mLKaleidoscope.getIcCameraDisagree());
         mImgShowSave.setImageResource(mLKaleidoscope.getIcCameraAgree());
+
     }
 
     private void initData() {
@@ -146,6 +148,11 @@ public class LKaleidoCameraActivity extends LKaleidoBaseActivity implements Surf
      * 切换前后摄像头
      */
     public void switchCamera() {
+
+        if (mCamera == null){
+            mLKaleidoscope.getToastShow().showLkToast(this,getString(R.string.camera_error));
+            return;
+        }
 
         if(cameraPosition == 1) {
             //现在是后置，变更为前置
@@ -169,7 +176,9 @@ public class LKaleidoCameraActivity extends LKaleidoBaseActivity implements Surf
     @Override
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
 
-        mCamera.autoFocus(null);
+        if (mCamera != null){
+            mCamera.autoFocus(null);
+        }
     }
 
     @Override
@@ -276,6 +285,7 @@ public class LKaleidoCameraActivity extends LKaleidoBaseActivity implements Surf
                 PreviewHeight = cur2.height;
 
 
+
         //设置
         parameters.setPreviewSize(PreviewWidth, PreviewHeight);
         parameters.setPictureSize(PreviewWidth, PreviewHeight);
@@ -337,9 +347,14 @@ public class LKaleidoCameraActivity extends LKaleidoBaseActivity implements Surf
      * 释放资源
      */
     private void cameraStopPreview(boolean isAllStop){
-        mCamera.stopPreview();
-        mCamera.release();
-        mCamera = null;
+
+        if (mCamera != null){
+            mCamera.stopPreview();
+            mCamera.release();
+            mCamera = null;
+        }
+
+
         if (isAllStop){
             mSurfaceHolder = null;
             mSurfaceView = null;
@@ -348,6 +363,11 @@ public class LKaleidoCameraActivity extends LKaleidoBaseActivity implements Surf
 
     //拍照结束
     private void cameraTakePicture(){
+        if (mCamera == null){
+            mLKaleidoscope.getToastShow().showLkToast(this,getString(R.string.camera_error));
+            return;
+        }
+
         mCamera.takePicture(null, null, new Camera.PictureCallback() {
             @Override
             public void onPictureTaken(byte[] data, Camera camera) {

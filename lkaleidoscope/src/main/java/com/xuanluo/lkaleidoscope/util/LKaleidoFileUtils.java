@@ -41,7 +41,6 @@ public class LKaleidoFileUtils {
         {
 
             e.printStackTrace();
-            // TODO: handle exception
         }finally{
             if(cursor != null){
                 cursor.close();

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -216,6 +217,8 @@ public class LKaleidoGridShowActivity extends LKaleidoBaseActivity
     public void onImagesLoaded(final List<LKaleidoImageFolder> imageFolders) {
         imageFolderList.clear();
         imageFolderList.addAll(imageFolders);
+//        mFolderAdapter.setSelectItem(0);
+        mFolderAdapter.notifyDataSetChanged();
 
         if (mShowAdapter != null && imageFolderList.size() > 0) {
 
@@ -228,8 +231,13 @@ public class LKaleidoGridShowActivity extends LKaleidoBaseActivity
                 }
             }
 
-            tvSelFolder.setText(imageFolderList.get(0).getName());
-            mShowAdapter.refreshData(imageFolderList.get(0).getImages());
+            //如果文件数量变化，重新选中文件夹
+            if (imageFolderList.size() <= mFolderAdapter.getSelectItem()){
+                mFolderAdapter.setSelectItem(0);
+            }
+
+            tvSelFolder.setText(imageFolderList.get(mFolderAdapter.getSelectItem()).getName());
+            mShowAdapter.refreshData(imageFolderList.get(mFolderAdapter.getSelectItem()).getImages());
         }
 
 
@@ -244,8 +252,9 @@ public class LKaleidoGridShowActivity extends LKaleidoBaseActivity
             return;
         }
 
-        VectorDrawableCompat folderBGDrawableCompat = VectorDrawableCompat.create(getResources(),R.drawable.bg_folder_sel_color,getTheme());
-        folderBGDrawableCompat.setTint(two_color_transparent);
+        GradientDrawable folderBGDrawableCompat = (GradientDrawable) getResources().getDrawable(R.drawable.bg_folder_sel_color);
+        folderBGDrawableCompat.setColor(two_color_transparent);
+
         folderPopUpWindow = new FolderPopUpWindow(this, mFolderAdapter);
 
         folderPopUpWindow.showAsDropDown(tvSelFolder, 0, 0);

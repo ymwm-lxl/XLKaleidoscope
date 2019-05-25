@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         LKaleidoscope lKaleidoscope = LKaleidoscope.getInstance()
                 .setImageLoader(new GlideImageLoader())//设置图片加载器
                 .setThemeStyle(R.style.mainTheme)//设置样式
-                .setToastShow(new ToastShow())//toast 显示仪
+//                .setToastShow(new ToastShow())//toast 显示仪
                 .setSelectLimit(3)//图片最多数量//如果設置為1 則為單選
                 .setGifShow(true)//是否显示gif 默认显示
                 .setSelectMinLimit(1)//最小选择图片数量 //如果显示相机，则无法控制
@@ -108,8 +108,9 @@ public class MainActivity extends AppCompatActivity {
                 .setOutPutY(1)//宽高比
                 .setFreeStyleCrop(false)//是否能够拖动裁剪框（比例自定）
                 .setCompressionQuality(100)//设置裁剪的图片质量，取值0-100
-                .setCircleDimmed(false)//是否要圆形
+                .setCircleDimmed(true)//是否要圆形
                 .setRotate(false);//是否支持旋转
+
 //                .setIcCameraBack(R.mipmap.ic_launcher)//相机页面-退出拍照页面按钮
 //                .setIcCameraTake(R.mipmap.ic_launcher)//相机页面-拍照按钮
 //                .setIcCameraFlip(R.mipmap.ic_launcher)//相机页面-切换前后摄像头按钮

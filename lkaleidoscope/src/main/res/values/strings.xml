@@ -5,4 +5,5 @@
     <string name="over_show_size">完成（ %s ）</string>
     <string name="ok">确定</string>
     <string name="make">裁剪</string>
+    <string name="camera_error">相机异常，请检查相机</string>
 </resources>

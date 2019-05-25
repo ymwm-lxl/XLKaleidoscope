@@ -224,9 +224,8 @@ public class LKaleidoGridShowAdapter extends RecyclerView.Adapter<RecyclerView.V
         if (onItemClicklistener!= null){
             onItemClicklistener.OnItemSelSize(mSelImageList.size());
         }
-//        notifyDataSetChanged();
+
         notifyItemChanged(position);
-//        notifyItemRangeChanged(position,1);
     }
 
     //获取选择的图片

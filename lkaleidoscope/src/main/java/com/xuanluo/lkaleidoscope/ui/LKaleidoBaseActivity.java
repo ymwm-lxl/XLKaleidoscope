@@ -1,11 +1,15 @@
 package com.xuanluo.lkaleidoscope.ui;
 
+import android.content.Context;
 import android.content.res.ColorStateList;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -16,6 +20,8 @@ import com.xuanluo.lkaleidoscope.R;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat;
 
@@ -49,6 +55,8 @@ public class LKaleidoBaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
+
         mBaseLKaleidoscope = LKaleidoscope.getInstance();
         setTheme(mBaseLKaleidoscope.getThemeStyle());
         initAttr();
@@ -141,19 +149,19 @@ public class LKaleidoBaseActivity extends AppCompatActivity {
         VectorDrawableCompat checknoDrawableCompat = VectorDrawableCompat.create(getResources(),R.drawable.ic_cleck_no,getTheme());
         checknoDrawableCompat.setTint(two_color);
 
-        //图片选择边框
-//        VectorDrawableCompat checkBorderDrawableCompat = VectorDrawableCompat.create(getResources(),R.drawable.bg_image_sel_border,getTheme());
-//        checkBorderDrawableCompat.setTint(two_color);
+        //选择边框背景
+        GradientDrawable checkBorderDrawableCompat = (GradientDrawable) getResources().getDrawable(R.drawable.bg_image_sel_border);
+        checkBorderDrawableCompat.setStroke(getResources().getDimensionPixelSize(R.dimen.dp_2),two_color);
 
         //文件夹选择背景
-//        VectorDrawableCompat folderBGDrawableCompat = VectorDrawableCompat.create(getResources(),R.drawable.bg_folder_sel_color,getTheme());
-//        folderBGDrawableCompat.setTint(two_color_transparent);
 
-        // TODO: 2019/5/24
+        GradientDrawable folderBGDrawableCompat = (GradientDrawable) getResources().getDrawable(R.drawable.bg_folder_sel_color);
+        folderBGDrawableCompat.setColor(two_color_transparent);
+
 
         //点击背景
-//        VectorDrawableCompat clickBGDrawableCompat = VectorDrawableCompat.create(getResources(),R.drawable.bg_item_click_bg,getTheme());
-//        clickBGDrawableCompat.setTint(sel_transparent);
+        GradientDrawable clickBGDrawableCompat = (GradientDrawable) getResources().getDrawable(R.drawable.bg_folder_sel_color);
+        clickBGDrawableCompat.setColor(sel_transparent);
 
         //相机图标
         VectorDrawableCompat cameraBackDrawableCompat = VectorDrawableCompat.create(getResources(),R.drawable.ic_camera_back,getTheme());

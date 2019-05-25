@@ -16,7 +16,7 @@
         <!-- 页面主要背景色的透明色 -->
         <item name="Lkaleido_main_color_transparent">#44FC766A</item>
         <!-- 页面主要颜色 （选中等效果的颜色） -->
-        <item name="Lkaleido_two_color">#C5DE48</item>
+        <item name="Lkaleido_two_color">#C50E08</item>
         <!-- 页面主要颜色背景色 -->
         <item name="Lkaleido_two_color_transparent">#44C5DE48</item>
 

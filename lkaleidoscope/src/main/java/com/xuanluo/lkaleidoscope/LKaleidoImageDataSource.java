@@ -113,13 +113,9 @@ import androidx.loader.content.Loader;
                 String imageMimeType = data.getString(data.getColumnIndexOrThrow(IMAGE_PROJECTION[5])); //图片的类型
                 long imageAddTime = data.getLong(data.getColumnIndexOrThrow(IMAGE_PROJECTION[6])); //图片被添加的时间
 
-
-                // TODO: 2019/5/10
                 if (!mLKaleidoscope.isGifShow() && imageMimeType.equals("image/gif")){
                     continue;
                 }
-
-
                 //封装实体
                 LKaleidoImageBean imageBean = new LKaleidoImageBean();
                 imageBean.setName(imageName);

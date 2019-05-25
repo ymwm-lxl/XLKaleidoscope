@@ -20,7 +20,6 @@ import java.io.File;
 public class GlideImageLoader implements LKaleidoImageLoader {
     @Override
     public void displayImage(Context context, String path, ImageView imageView, int width, int height) {
-        // TODO: 2019/4/27 占位图 缩略图等等
         RequestOptions requestOptions = new RequestOptions()
                 .diskCacheStrategy(DiskCacheStrategy.ALL);   //缓存全尺寸;
 //                .error(R.drawable.)           //设置错误图片
