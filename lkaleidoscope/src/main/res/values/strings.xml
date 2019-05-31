@@ -6,4 +6,10 @@
     <string name="ok">确定</string>
     <string name="make">裁剪</string>
     <string name="camera_error">相机异常，请检查相机</string>
+    <string name="contentDescription1">返回</string>
+    <string name="contentDescription2">拍摄</string>
+    <string name="contentDescription3">翻转前后</string>
+    <string name="contentDescription4">取消</string>
+    <string name="contentDescription5">确定</string>
+    <string name="contentDescription6">拍好的照片</string>
 </resources>

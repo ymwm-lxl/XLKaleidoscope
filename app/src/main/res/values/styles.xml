@@ -12,28 +12,26 @@
 
     <style name="mainTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- 页面主要背景色 （例如标题栏背景）-->
-        <item name="Lkaleido_main_color">#FC766A</item>
-        <!-- 页面主要背景色的透明色 -->
-        <item name="Lkaleido_main_color_transparent">#44FC766A</item>
+        <item name="Lkaleido_main_color">#fff</item>
         <!-- 页面主要颜色 （选中等效果的颜色） -->
-        <item name="Lkaleido_two_color">#C50E08</item>
+        <item name="Lkaleido_two_color">#48C1FF</item>
         <!-- 页面主要颜色背景色 -->
-        <item name="Lkaleido_two_color_transparent">#44C5DE48</item>
+        <item name="Lkaleido_two_color_transparent">#4448C1FF</item>
 
         <!-- 卡片背景色 文件夹选择背景 -->
-        <item name="Lkaleido_card_color">#ffffff</item>
+        <item name="Lkaleido_card_color">@color/card_color</item>
         <!-- 图片展示页面图片背景色 -->
-        <item name="Lkaleido_grid_bg_color">#313031</item>
+        <item name="Lkaleido_grid_bg_color">@color/grid_bg_color</item>
 
         <!-- 文字主要颜色 -->
-        <item name="Lkaleido_font_main_color">#FFFFFF</item>
+        <item name="Lkaleido_font_main_color">@color/font_black_color</item>
         <!-- 文字-黑色 -->
-        <item name="Lkaleido_font_black_color">#393939</item>
+        <item name="Lkaleido_font_black_color">@color/font_black_color</item>
         <!-- 文字-浅灰 -->
-        <item name="Lkaleido_font_gray_color">#9A9A99</item>
+        <item name="Lkaleido_font_gray_color">@color/font_gray_color</item>
 
         <!-- 按钮点击时的背景色 -->
-        <item name="Lkaleido_sel_transparent">#33333333</item>
+        <item name="Lkaleido_sel_transparent">@color/sel_transparent</item>
     </style>
 
 </resources>

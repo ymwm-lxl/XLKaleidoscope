@@ -248,7 +248,7 @@ public class LKaleidoGridShowActivity extends LKaleidoBaseActivity
 
         if (imageFolderList == null || imageFolderList.size() == 0) {
 //            Toast.makeText(this,"您的手机没有图片",Toast.LENGTH_SHORT).show();
-            Log.i(TAG, "您的手机没有图片");
+            mLKaleidoscope.getToastShow().showLkToast(this,"您的手机没有图片");
             return;
         }
 

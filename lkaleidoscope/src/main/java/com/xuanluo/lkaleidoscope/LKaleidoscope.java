@@ -120,23 +120,23 @@ public class LKaleidoscope {
      */
     public boolean isRadioMode() {
         //如果图片数量为1 则为单选
-        if (getSelectLimit() == 1){
-            radioMode =  true;
-        }else {
-            radioMode = false;
-        }
+//        if (getSelectLimit() == 1){
+//            radioMode =  true;
+//        }else {
+//            radioMode = false;
+//        }
         return radioMode;
     }
 
-//    /**
-//     * 设置是否单选（如果图片数量为1 则为单选）
-//     * @param radioMode
-//     * @return
-//     */
-//    public LKaleidoscope setRadioMode(boolean radioMode) {
-//        this.radioMode = radioMode;
-//        return this;
-//    }
+    /**
+     * 设置是否单选（如果图片数量为1 则为单选）
+     * @param radioMode
+     * @return
+     */
+    public LKaleidoscope setRadioMode(boolean radioMode) {
+        this.radioMode = radioMode;
+        return this;
+    }
 
 
     /**

@@ -37,7 +37,6 @@ public class LKaleidoBaseActivity extends AppCompatActivity {
     protected final String TAG = this.getClass().getSimpleName();
 
     protected int main_color;
-    protected int main_color_transparent;
     protected int two_color;
     protected int two_color_transparent;
 
@@ -54,15 +53,15 @@ public class LKaleidoBaseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
 
         mBaseLKaleidoscope = LKaleidoscope.getInstance();
         setTheme(mBaseLKaleidoscope.getThemeStyle());
         initAttr();
-        initDrawable();
         //沉浸式
         setTranslucentStatus();
+        super.onCreate(savedInstanceState);
     }
 
 
@@ -96,7 +95,6 @@ public class LKaleidoBaseActivity extends AppCompatActivity {
     private void initAttr(){
         TypedArray typedValue = this.getTheme().obtainStyledAttributes(new int[]{
                 R.attr.Lkaleido_main_color ,
-                R.attr.Lkaleido_main_color_transparent ,
                 R.attr.Lkaleido_two_color ,
                 R.attr.Lkaleido_two_color_transparent ,
 
@@ -110,21 +108,23 @@ public class LKaleidoBaseActivity extends AppCompatActivity {
         });
 
         main_color = typedValue.getColor(0,getResources().getColor(R.color.main_color));
-        main_color_transparent  = typedValue.getColor(1,getResources().getColor(R.color.main_color_transparent));
-        two_color = typedValue.getColor(2,getResources().getColor(R.color.two_color));
-        two_color_transparent = typedValue.getColor(3,getResources().getColor(R.color.two_color_transparent));
+        two_color = typedValue.getColor(1,getResources().getColor(R.color.two_color));
+        two_color_transparent = typedValue.getColor(2,getResources().getColor(R.color.two_color_transparent));
 
-        card_color = typedValue.getColor(4,getResources().getColor(R.color.card_color));
-        grid_bg_color = typedValue.getColor(5,getResources().getColor(R.color.grid_bg_color));
+        card_color = typedValue.getColor(3,getResources().getColor(R.color.card_color));
+        grid_bg_color = typedValue.getColor(4,getResources().getColor(R.color.grid_bg_color));
 
-        font_main_color = typedValue.getColor(6,getResources().getColor(R.color.font_main_color));
-        font_black_color = typedValue.getColor(7,getResources().getColor(R.color.font_black_color));
-        font_gray_color = typedValue.getColor(8,getResources().getColor(R.color.font_gray_color));
+        font_main_color = typedValue.getColor(5,getResources().getColor(R.color.font_main_color));
+        font_black_color = typedValue.getColor(6,getResources().getColor(R.color.font_black_color));
+        font_gray_color = typedValue.getColor(7,getResources().getColor(R.color.font_gray_color));
 
-        sel_transparent = typedValue.getColor(9,getResources().getColor(R.color.sel_transparent));
+        sel_transparent = typedValue.getColor(8,getResources().getColor(R.color.sel_transparent));
 
 
         typedValue.recycle();
+
+
+        initDrawable();
     }
 
     private void initDrawable() {

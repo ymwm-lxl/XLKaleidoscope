@@ -116,6 +116,7 @@ import androidx.loader.content.Loader;
                 if (!mLKaleidoscope.isGifShow() && imageMimeType.equals("image/gif")){
                     continue;
                 }
+
                 //封装实体
                 LKaleidoImageBean imageBean = new LKaleidoImageBean();
                 imageBean.setName(imageName);
@@ -174,7 +175,6 @@ import androidx.loader.content.Loader;
     //当一个已创建的加载器被重置从而使其数据无效时，此方法被调用。此回调使你能发现什么时候数据将被释放于是你可以释放对它的引用。
     @Override
     public void onLoaderReset(@NonNull Loader<Cursor> loader) {
-
     }
 
     /** 所有图片加载完成的回调接口 */

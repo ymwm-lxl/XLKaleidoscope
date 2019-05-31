@@ -2,7 +2,6 @@
 <resources>
 
     <color name="main_color">#FC766A</color>
-    <color name="main_color_transparent">#44FC766A</color>
     <color name="two_color">#C5DE48</color>
     <color name="two_color_transparent">#44C5DE48</color>
 

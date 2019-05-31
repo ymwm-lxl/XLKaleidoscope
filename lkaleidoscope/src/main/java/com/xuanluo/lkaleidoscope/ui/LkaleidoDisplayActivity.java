@@ -80,6 +80,7 @@ public class LkaleidoDisplayActivity extends LKaleidoBaseActivity implements Lka
                 enterCrop();//进入裁剪功能
             }
 
+
         }else {
             //不需要裁剪
             tvCrop.setVisibility(View.GONE);
@@ -90,7 +91,6 @@ public class LkaleidoDisplayActivity extends LKaleidoBaseActivity implements Lka
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Log.e(TAG,requestCode+"::");
         if (requestCode == UCrop.REQUEST_CROP){
             if (resultCode == Activity.RESULT_OK && data!= null){
                 Uri resultUri = UCrop.getOutput(data);
@@ -102,7 +102,6 @@ public class LkaleidoDisplayActivity extends LKaleidoBaseActivity implements Lka
                 LKaleidoImageBean resuleImageBean = LKaleidoUtils.photo2Bean(this,resuleAbsolutePath
                         ,resuleFileName);
 
-                Log.e(TAG,resuleImageBean.getPath());
 
                 imageList.set(mVpShow.getCurrentItem(), resuleImageBean);
 
@@ -128,7 +127,6 @@ public class LkaleidoDisplayActivity extends LKaleidoBaseActivity implements Lka
 
     private void initView(){
         //沉浸式
-
         mIvBack = findViewById(R.id.topBar_iv_back);
         mVpShow = findViewById(R.id.display_vp_show);
         rvGallery = findViewById(R.id.display_rv_gallery);
@@ -289,10 +287,10 @@ public class LkaleidoDisplayActivity extends LKaleidoBaseActivity implements Lka
 
         //如果是gif 则不显示裁剪
         if (imageList.get(position).getMimeType().equals("image/gif")){
-            Log.e(TAG,"隐藏裁剪");
+            Log.d(TAG,"隐藏裁剪");
             tvCrop.setVisibility(View.GONE);
         }else {
-            Log.e(TAG,"显示裁剪");
+            Log.d(TAG,"显示裁剪");
             tvCrop.setVisibility(View.VISIBLE);
         }
     }

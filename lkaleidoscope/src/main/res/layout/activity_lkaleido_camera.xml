@@ -27,7 +27,8 @@
             android:id="@+id/camera_img_back"
             android:layout_width="@dimen/ic_small_32"
             android:layout_height="@dimen/ic_small_32"
-            android:src="@drawable/ic_camera_back"/>
+            app:srcCompat="@drawable/ic_camera_back"
+            android:contentDescription="@string/contentDescription1"/>
 
         <View
             android:layout_width="0dp"
@@ -38,7 +39,8 @@
             android:id="@+id/camera_img_takeCamera"
             android:layout_width="@dimen/ic_big"
             android:layout_height="@dimen/ic_big"
-            android:src="@drawable/ic_camera_take"/>
+            app:srcCompat="@drawable/ic_camera_take"
+            android:contentDescription="@string/contentDescription2"/>
 
         <View
             android:layout_width="0dp"
@@ -49,7 +51,8 @@
             android:id="@+id/camera_img_switch"
             android:layout_width="@dimen/ic_small_32"
             android:layout_height="@dimen/ic_small_32"
-            android:src="@drawable/ic_camera_flip" />
+            app:srcCompat="@drawable/ic_camera_flip"
+            android:contentDescription="@string/contentDescription3"/>
 
     </LinearLayout>
 
@@ -75,7 +78,8 @@
             <ImageView
                 android:id="@+id/camera_img_show"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                android:contentDescription="@string/contentDescription6"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -84,22 +88,24 @@
                 android:gravity="center"
                 android:layout_gravity="bottom"
                 android:layout_marginBottom="@dimen/dp_32"
-                android:paddingLeft="@dimen/dp_16"
-                android:paddingRight="@dimen/dp_16">
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16">
 
                 <ImageView
                     android:id="@+id/camera_img_closeShow"
                     android:layout_width="@dimen/ic_big"
                     android:layout_height="@dimen/ic_big"
-                    android:layout_marginRight="@dimen/dp_32"
-                    android:src="@drawable/ic_camera_disagree"/>
+                    android:layout_marginEnd="@dimen/dp_32"
+                    app:srcCompat="@drawable/ic_camera_disagree"
+                    android:contentDescription="@string/contentDescription4"/>
 
                 <ImageView
                     android:id="@+id/camera_img_saveShow"
                     android:layout_width="@dimen/ic_big"
                     android:layout_height="@dimen/ic_big"
-                    android:layout_marginLeft="@dimen/dp_32"
-                    android:src="@drawable/ic_camera_agree"/>
+                    android:layout_marginStart="@dimen/dp_32"
+                    app:srcCompat="@drawable/ic_camera_agree"
+                    android:contentDescription="@string/contentDescription5"/>
 
 
             </LinearLayout>

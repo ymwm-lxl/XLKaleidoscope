@@ -28,7 +28,7 @@
                 android:layout_width="@dimen/ic_big"
                 android:layout_height="@dimen/ic_big"
                 android:src="@drawable/ic_default_image"
-                android:layout_marginRight="@dimen/dp_6"
+                android:layout_marginEnd="@dimen/dp_6"
                 android:layout_marginBottom="@dimen/dp_6"
                 android:scaleType="centerCrop"/>
 

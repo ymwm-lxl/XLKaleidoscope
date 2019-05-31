@@ -64,11 +64,8 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtras(bundle);
                 startActivityForResult(intent,JUMP_TAG_SEL_IMG);
 
-
             }
         });
-
-
 
 
         mShowAdapter = new ImageShowAdapter(this, mImageBeans);
@@ -97,13 +94,14 @@ public class MainActivity extends AppCompatActivity {
                 .setImageLoader(new GlideImageLoader())//设置图片加载器
                 .setThemeStyle(R.style.mainTheme)//设置样式
 //                .setToastShow(new ToastShow())//toast 显示仪
-                .setSelectLimit(3)//图片最多数量//如果設置為1 則為單選
+                .setSelectLimit(1)//图片最多数量//如果設置為1
                 .setGifShow(true)//是否显示gif 默认显示
                 .setSelectMinLimit(1)//最小选择图片数量 //如果显示相机，则无法控制
                 .setSpanCountLimit(3)//設置圖片列數
                 .setShowCamera(true)//是否显示相机
                 .setCrop(true)//是否裁剪
                 .setDisplay(true)//是否预览
+                .setRadioMode(false)//是否单选
                 .setOutPutX(1)//宽高比
                 .setOutPutY(1)//宽高比
                 .setFreeStyleCrop(false)//是否能够拖动裁剪框（比例自定）

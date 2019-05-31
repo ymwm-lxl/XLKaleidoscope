@@ -2,7 +2,6 @@
 <resources>
 
     <attr name="Lkaleido_main_color" format="color"/>
-    <attr name="Lkaleido_main_color_transparent" format="color"/>
     <attr name="Lkaleido_two_color" format="color"/>
     <attr name="Lkaleido_two_color_transparent" format="color"/>
 

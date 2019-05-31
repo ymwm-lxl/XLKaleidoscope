@@ -29,7 +29,7 @@
         android:gravity="center"
         android:background="@drawable/sel_checkbox_image"
         android:button="@null"
-        android:layout_marginRight="@dimen/dp_6"
+        android:layout_marginEnd="@dimen/dp_6"
         android:layout_marginTop="@dimen/dp_6"
         app:lk_rope_Id ="@id/item_gridShow_view_imageSelBorder"/>
 
